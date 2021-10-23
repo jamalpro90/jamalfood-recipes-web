@@ -1,0 +1,161 @@
+@import '../variabel.scss';
+
+.nav-container {
+  .nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -2px;
+
+      span {
+        color: $green;
+        font-size: 2.6rem;
+        font-weight: 700;
+        font-style: italic;
+      }
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        list-style: none;
+        padding: 5px 7px;
+        margin: 0 7px;
+
+        a {
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .nav-search {
+      display: flex;
+      align-items: center;
+
+      .search-icon {
+        width: 30px;
+        margin-right: 10px;
+      }
+
+      input {
+        padding: 5px 7px;
+        font-size: 1.1rem;
+        border-radius: 3px;
+        border: 1px solid #999;
+        outline: none;
+        width: 100%;
+      }
+    }
+  }
+
+  // Nav Middle
+  .nav-middle {
+    .nav-search {
+      display: none;
+      align-items: center;
+
+      .search-icon {
+        width: 30px;
+        margin-right: 10px;
+      }
+
+      input {
+        padding: 5px 7px;
+        font-size: 1.1rem;
+        border-radius: 3px;
+        border: 1px solid #999;
+        outline: none;
+        width: 100%;
+      }
+    }
+  }
+
+  // Nav Bottom
+  .nav-bottom {
+    ul {
+      display: none;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        list-style: none;
+        padding: 5px 7px;
+        margin: 0 7px;
+
+        a {
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-container {
+    .nav-top {
+      justify-content: center;
+      ul {
+        display: none;
+      }
+
+      .nav-search {
+        display: none;
+      }
+    }
+
+    .nav-middle {
+      margin: 1rem 0;
+      .nav-search {
+        display: flex;
+        justify-content: center;
+
+        input {
+          max-width: 60%;
+        }
+      }
+    }
+
+    .nav-bottom {
+      ul {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-container .nav-middle .nav-search input {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 444px) {
+  .nav-container .nav-bottom {
+    ul {
+      display: flex;
+      // border: 1px solid red;
+      overflow-x: auto;
+      padding-left: 4rem;
+      width: 100%;
+
+      li {
+        margin: 0 5px;
+        a {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

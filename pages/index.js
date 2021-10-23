@@ -1,7 +1,10 @@
+import Hero from '../components/Hero';
+import Layout from '../components/Layout';
+
 export default function Home() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <Layout title="Home">
+      <Hero />
+    </Layout>
   );
 }
