@@ -1,0 +1,44 @@
+@import '../variabel.scss';
+
+.populer-food {
+  background-color: $secondary-background;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 3.5rem;
+    font-family: 'Bitter', serif;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    color: $secondary-font;
+    margin: 1rem 0;
+  }
+
+  .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    img {
+      border-radius: 50%;
+      width: 120px;
+      height: 100px;
+      margin: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

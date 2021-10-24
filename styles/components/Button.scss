@@ -38,3 +38,13 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .btn-container,
+  .btn-container-outlined {
+    button {
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+  }
+}
