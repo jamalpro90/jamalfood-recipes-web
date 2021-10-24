@@ -4,6 +4,7 @@
 @import './components/Button.scss';
 @import './components/PopulerFoods.scss';
 @import './components/VarietyRecipes.scss';
+@import './components/CarouselCom.scss';
 
 * {
   margin: 0;
@@ -13,4 +14,13 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+.green-span {
+  color: $green;
+  background-color: $green-secondary;
+  border: none;
+  border-radius: 30px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
 }

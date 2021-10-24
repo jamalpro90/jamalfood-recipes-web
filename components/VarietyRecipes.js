@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Button from './Button';
+import GreenSpan from './GreenSpan';
 
 function Hero() {
   return (
@@ -12,7 +13,7 @@ function Hero() {
       </section>
       {/* Right Section */}
       <section className="right">
-        <span>Makanan & Minuman</span>
+        <GreenSpan text="Makanan & Minuman" />
         <h2>Variasi resep makanan dan minuman</h2>
         <div className="p-right">
           <p>Kami punya banyak variasi resep makanan dan minuman resep dari koki terpercaya, dengan cara memasak yang jelas dan rasa yang enak.</p>

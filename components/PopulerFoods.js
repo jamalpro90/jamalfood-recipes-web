@@ -2,8 +2,6 @@
 import { populerFoodsImg } from '../data/PopulerFoods';
 
 function PopulerFoods() {
-  console.log(populerFoodsImg);
-
   return (
     <div className="populer-food">
       <h3>Menu Populer</h3>

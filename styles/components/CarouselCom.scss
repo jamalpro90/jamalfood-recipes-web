@@ -1,0 +1,107 @@
+.caro-container {
+  padding: 0 2rem;
+  // border: 1px solid blue;
+  height: 90vh;
+  // width: 300vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .caro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    // border: 1px solid red;
+    position: relative;
+
+    .prev {
+      position: absolute;
+      left: -6rem;
+      width: 4rem;
+      color: $green;
+      cursor: pointer;
+    }
+
+    .next {
+      position: absolute;
+      right: -6rem;
+      width: 4rem;
+      color: $green;
+      cursor: pointer;
+    }
+
+    .left {
+      h3 {
+        font-size: 2rem;
+        padding: 1rem 0;
+        font-family: 'Bitter', serif;
+      }
+
+      p {
+        width: 90%;
+        color: $secondary-font;
+        font-size: 0.9rem;
+      }
+
+      .time-cook {
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+
+        .watch-icon {
+          width: 1.3rem;
+          margin-left: 0.5rem;
+          padding: 0.7rem 0;
+        }
+      }
+
+      .thumb-container {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        .thumb {
+          background-color: #eee;
+          border-radius: 3px;
+          width: 40px;
+          height: 40px;
+          padding: 5px;
+          cursor: pointer;
+          margin-right: 1.5rem;
+
+          &.more-thumb {
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    // Right
+    .caro-img {
+      border-radius: 5px;
+    }
+
+    // Dots
+    .dots {
+      position: absolute;
+      bottom: -4rem;
+
+      span {
+        font-size: 0.7rem;
+        margin: 0 0.5rem;
+        color: $green-third;
+        cursor: pointer;
+
+        &.active-dot {
+          color: $green;
+        }
+      }
+    }
+  }
+}
