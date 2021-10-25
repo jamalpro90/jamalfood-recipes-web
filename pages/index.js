@@ -3,6 +3,7 @@ import GetMobileApp from '../components/GetMobileApp';
 import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import PopulerFoods from '../components/PopulerFoods';
+import Subscribe from '../components/Subscribe';
 import VarietyRecipes from '../components/VarietyRecipes';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <VarietyRecipes />
       <CarouselCom />
       <GetMobileApp />
+      <Subscribe />
     </Layout>
   );
 }
