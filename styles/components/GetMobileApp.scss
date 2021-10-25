@@ -1,4 +1,4 @@
-.vari-container {
+.get-mobile-container {
   display: flex;
   padding: 0 2rem;
   flex-direction: row;
@@ -28,14 +28,29 @@
     .btn-container {
       display: flex;
       align-items: center;
+
+      .app-img-container {
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:first-child {
+          margin-right: 1rem;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 
   .left {
     flex: 1;
+    // border: 1px solid blue;
 
-    .img {
-      transform: scaleX(-1);
+    .img-container {
+      width: 250px;
+      margin: 0 auto;
     }
   }
 }

@@ -39,7 +39,7 @@ function CarouselItem() {
       {/* right */}
       <div className="right">
         <div className="img-container">
-          <Image className="caro-img" src={image} alt="image" width={640} height={480} />
+          <Image className="caro-img" src={image} alt="image" width={450} height={340} layout="fixed" />
         </div>
       </div>
       {/* next arrow */}

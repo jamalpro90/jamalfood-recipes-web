@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Button from './Button';
 import GreenSpan from './GreenSpan';
 
-function Hero() {
+function VarietyRecipes() {
   return (
     <div className="vari-container">
       {/* Left Section */}
@@ -26,4 +26,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default VarietyRecipes;

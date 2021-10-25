@@ -1,4 +1,5 @@
 import CarouselCom from '../components/CarouselCom';
+import GetMobileApp from '../components/GetMobileApp';
 import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import PopulerFoods from '../components/PopulerFoods';
@@ -11,6 +12,7 @@ export default function Home() {
       <PopulerFoods />
       <VarietyRecipes />
       <CarouselCom />
+      <GetMobileApp />
     </Layout>
   );
 }
