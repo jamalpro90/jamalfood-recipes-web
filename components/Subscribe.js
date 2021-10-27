@@ -6,6 +6,8 @@ function Subscribe() {
         <div className="input-box">
           <i className="far fa-envelope"></i>
           <input type="text" placeholder="Langganan" />
+        </div>
+        <div className="btn-container">
           <button>Langganan</button>
         </div>
       </div>

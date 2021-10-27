@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 
   .right {
     flex: 1;
@@ -56,10 +56,10 @@
 }
 
 @media (max-width: 900px) {
-  .hero-container {
+  .get-mobile-container {
     display: flex;
     padding: 0 2rem;
-    flex-direction: column-reverse;
+    flex-direction: column;
 
     .right {
       margin: 2rem 0;
@@ -71,10 +71,10 @@
 
     .left {
       width: 100%;
-      margin-top: 200px;
+      margin-top: 4rem;
 
       .img-container {
-        width: 70vw;
+        width: 50%;
         margin: 0 auto;
       }
     }

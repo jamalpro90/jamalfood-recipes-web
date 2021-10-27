@@ -1,8 +1,8 @@
 .caro-container {
-  padding: 0 2rem;
+  padding: 4rem 2rem;
   // border: 1px solid blue;
   background-color: $secondary-background;
-  height: 100vh;
+  min-height: 100vh;
   // width: 300vw;
   display: flex;
   justify-content: center;
@@ -32,61 +32,72 @@
       cursor: pointer;
     }
 
-    .left {
-      h3 {
-        font-size: 2rem;
-        padding: 1rem 0;
-        font-family: 'Bitter', serif;
-      }
+    .left-and-right {
+      display: flex;
+      // border: 1px solid red;
+      flex-direction: row;
 
-      p {
-        width: 90%;
-        color: $secondary-font;
-        font-size: 0.9rem;
-      }
-
-      .time-cook {
-        font-weight: bolder;
-        display: flex;
-        align-items: center;
-
-        .watch-icon {
-          width: 1.3rem;
-          margin-left: 0.5rem;
-          padding: 0.7rem 0;
+      .left {
+        flex: 1;
+        h3 {
+          font-size: 2rem;
+          padding: 1rem 0;
+          font-family: 'Bitter', serif;
         }
-      }
 
-      .thumb-container {
-        display: flex;
-        align-items: center;
-        margin-top: 1rem;
+        p {
+          width: 90%;
+          color: $secondary-font;
+          font-size: 0.9rem;
+        }
 
-        .thumb {
-          background-color: #eee;
-          border-radius: 3px;
-          width: 40px;
-          height: 40px;
-          padding: 5px;
-          cursor: pointer;
-          margin-right: 1.5rem;
+        .time-cook {
+          font-weight: bolder;
+          display: flex;
+          align-items: center;
 
-          &.more-thumb {
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.3rem;
-            font-weight: 600;
+          .watch-icon {
+            width: 1.3rem;
+            margin-left: 0.5rem;
+            padding: 0.7rem 0;
+          }
+        }
+
+        .thumb-container {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+
+          .thumb {
+            background-color: #eee;
+            border-radius: 3px;
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            cursor: pointer;
+            margin-right: 1.5rem;
+
+            &.more-thumb {
+              color: #333;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.3rem;
+              font-weight: 600;
+            }
           }
         }
       }
-    }
 
-    // Right
-    .right {
-      .caro-img {
-        border-radius: 5px;
+      // Right
+      .right {
+        flex: 1;
+        // border: 1px solid blue;
+        .img-container {
+          .caro-img {
+            border-radius: 5px;
+          }
+        }
       }
     }
 
@@ -106,5 +117,20 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .caro-container .caro .left-and-right {
+    flex-direction: column-reverse;
+
+    .right .img-container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 3rem 0;
+    }
+  }
+  .caro-container .caro .dots {
+    bottom: 15rem;
   }
 }

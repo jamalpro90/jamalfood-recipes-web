@@ -80,3 +80,30 @@ footer {
     }
   }
 }
+
+@media (max-width: 660px) {
+  footer {
+    .top {
+      padding-bottom: 4rem;
+      .top-section {
+        h5 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .bottom {
+      p {
+        font-size: 0.8rem;
+      }
+
+      .icon-container > * {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

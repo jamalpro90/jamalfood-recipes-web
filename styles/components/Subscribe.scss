@@ -8,7 +8,7 @@
 
   .subscribe {
     width: 70%;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     // background-color: crimson;
     background-image: linear-gradient(to top right, $green, rgb(0, 204, 255));
     border-radius: 70px;
@@ -23,7 +23,6 @@
     .input-box {
       margin: 0 auto;
       width: fit-content;
-      margin-top: 1rem;
       background-color: white;
       border-radius: 10px;
       padding: 0.7rem 1rem;
@@ -32,10 +31,11 @@
         color: #555;
         font-size: 1.2rem;
         margin-right: 0.5rem;
+        // border: 1px solid red;
       }
 
       input {
-        width: 200px;
+        max-width: 300px;
         border: none;
         outline: none;
         border-radius: 5px;
@@ -44,21 +44,38 @@
         font-size: 1.1rem;
         color: #555;
       }
+    }
+    .btn-container {
+      // border: 2px solid white;
+      text-align: center;
+      margin-top: 2rem;
 
       button {
-        border: none;
+        // border: 1px solid blue;
         outline: none;
         border-radius: 5px;
-        background-color: $light-green;
+        background-color: crimson;
         color: white;
-        padding: 8px 10px;
-        font-size: 1.1rem;
+        padding: 8px 30px;
+        font-size: 1.3rem;
         cursor: pointer;
         transition: 0.2s;
 
         &:hover {
-          background-color: $green;
+          background-color: rgb(190, 10, 46);
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .subscribe-container {
+    .subscribe {
+      border-radius: 50px;
+
+      h3 {
+        font-size: 1.6rem;
       }
     }
   }

@@ -16,30 +16,33 @@ function CarouselItem() {
       <svg onClick={prevArrow} xmlns="http://www.w3.org/2000/svg" className="prev" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
       </svg>
-      {/* left */}
-      <div className="left">
-        <GreenSpan text={greenSpan} />
-        <h3>{title}</h3>
-        <p>{desc}</p>
-        <p className="time-cook">
-          {cookTime}
-          <svg xmlns="http://www.w3.org/2000/svg" className="watch-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </p>
-        <div className="thumb-container">
-          {thumbs.map((image, i) => (
-            <div key={i} className="thumb">
-              <Image src={image} alt="image" width={48} height={48} layout="responsive" />
-            </div>
-          ))}
-          <div className="thumb more-thumb">+6</div>
+      {/* left and rignt container */}
+      <div className="left-and-right">
+        {/* left */}
+        <div className="left">
+          <GreenSpan text={greenSpan} />
+          <h3>{title}</h3>
+          <p>{desc}</p>
+          <p className="time-cook">
+            {cookTime}
+            <svg xmlns="http://www.w3.org/2000/svg" className="watch-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </p>
+          <div className="thumb-container">
+            {thumbs.map((image, i) => (
+              <div key={i} className="thumb">
+                <Image src={image} alt="image" width={48} height={48} layout="responsive" />
+              </div>
+            ))}
+            <div className="thumb more-thumb">+6</div>
+          </div>
         </div>
-      </div>
-      {/* right */}
-      <div className="right">
-        <div className="img-container">
-          <Image className="caro-img" src={image} alt="image" width={450} height={340} layout="fixed" />
+        {/* right */}
+        <div className="right">
+          <div className="img-container">
+            <Image className="caro-img" src={image} alt="image" width={400} height={340} layout="responsive" />
+          </div>
         </div>
       </div>
       {/* next arrow */}
