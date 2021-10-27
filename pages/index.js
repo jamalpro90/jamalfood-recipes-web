@@ -1,4 +1,5 @@
 import CarouselCom from '../components/CarouselCom';
+import Footer from '../components/Footer';
 import GetMobileApp from '../components/GetMobileApp';
 import Hero from '../components/Hero';
 import Layout from '../components/Layout';
@@ -15,6 +16,7 @@ export default function Home() {
       <CarouselCom />
       <GetMobileApp />
       <Subscribe />
+      <Footer />
     </Layout>
   );
 }

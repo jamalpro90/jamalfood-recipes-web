@@ -1,12 +1,12 @@
+import Brand from './Brand';
+
 function Navbar() {
   return (
     <div className="nav-container">
       {/* nav top */}
       <div className="nav-top">
         {/* Brand */}
-        <h3>
-          Jamal<span>Food</span>
-        </h3>
+        <Brand />
         {/* Nav Item */}
         <ul className="nav-item-container">
           <li>
