@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Button from './Button';
 import GreenSpan from './GreenSpan';
+import useTranslation from 'next-translate/useTranslation';
 
 function VarietyRecipes() {
+  const { t } = useTranslation();
+
   return (
     <div className="vari-container">
       {/* Left Section */}
@@ -13,13 +16,13 @@ function VarietyRecipes() {
       </section>
       {/* Right Section */}
       <section className="right">
-        <GreenSpan text="Makanan & Minuman" />
-        <h2>Variasi resep makanan dan minuman</h2>
+        <GreenSpan text={t('common:variGreenSpan')} />
+        <h2>{t('common:variTitle')}</h2>
         <div className="p-right">
-          <p>Kami punya banyak variasi resep makanan dan minuman resep dari koki terpercaya, dengan cara memasak yang jelas dan rasa yang enak.</p>
+          <p>{t('common:variDesc')}</p>
         </div>
         <div className="btn-container">
-          <Button text="Lihat Menu" />
+          <Button text={t('common:variBtn')} />
         </div>
       </section>
     </div>

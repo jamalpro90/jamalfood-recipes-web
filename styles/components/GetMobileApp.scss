@@ -82,14 +82,10 @@
 }
 
 @media (max-width: 500px) {
-  .hero-container {
+  .get-mobile-container {
     .right {
       h2 {
         font-size: 2rem;
-      }
-
-      p {
-        font-size: 0.8rem;
       }
     }
   }

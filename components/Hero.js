@@ -1,19 +1,22 @@
 import Image from 'next/image';
 import Button from './Button';
+import useTranslation from 'next-translate/useTranslation';
 
 function Hero() {
+  const { t } = useTranslation();
+
   return (
     <div className="hero-container">
       {/* Left Section */}
       <section className="left">
-        <h2>Mulai Memasak Dengan Resep Populer</h2>
+        <h2>{t('common:heroTitle')}</h2>
         <div className="p-left">
-          <p>Mau masak tapi bingung mau dari mana?</p>
-          <p>Jangan kawatir kami akan memandu anda</p>
+          <p>{t('common:heroDesc1')}</p>
+          <p>{t('common:heroDesc2')}</p>
         </div>
         <div className="btn-container">
-          <Button text="Mulai" />
-          <Button text="Cari Resep" outlined />
+          <Button text={t('common:heroBtn1')} />
+          <Button text={t('common:heroBtn2')} outlined />
         </div>
       </section>
       {/* Right Section */}

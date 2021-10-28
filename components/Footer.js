@@ -1,33 +1,37 @@
+import useTranslation from 'next-translate/useTranslation';
+
 function Footer() {
+  const { t } = useTranslation();
+
   return (
-    <footer className="footer-container">
+    <footer>
       {/* top */}
       <div className="top">
         <div className="top-section">
           <h5 className="brand">
             Jamal<span>Food</span>
           </h5>
-          <p>JamalFood adalah aplikasi untuk menemukan berbagai resep masakan makanan dan minuman</p>
+          <p>{t('common:footerBrandDesc')}</p>
         </div>
         <div className="top-section list">
-          <h5>Tentang</h5>
-          <p>Tentang Kami</p>
-          <p>Resep</p>
-          <p>Unduh</p>
-          <p>Kontak</p>
+          <h5>{t('common:footerAboutTitle')}</h5>
+          <p>{t('common:footerAboutList1')}</p>
+          <p>{t('common:footerAboutList2')}</p>
+          <p>{t('common:footerAboutList3')}</p>
+          <p>{t('common:footerAboutList4')}</p>
         </div>
         <div className="top-section list">
-          <h5>Perusahaan</h5>
-          <p>Resep Kami</p>
-          <p>Langganan</p>
-          <p>FAQ</p>
+          <h5>{t('common:footerCompanyTitle')}</h5>
+          <p>{t('common:footerCompanyList1')}</p>
+          <p>{t('common:footerCompanyList2')}</p>
+          <p>{t('common:footerCompanyList3')}</p>
         </div>
         <div className="top-section list">
-          <h5>Bantuan</h5>
-          <p>Akun</p>
-          <p>Pusat Bantuan</p>
-          <p>Masukan</p>
-          <p>Aksesibilitas</p>
+          <h5>{t('common:footerHelpTitle')}</h5>
+          <p>{t('common:footerHelpList1')}</p>
+          <p>{t('common:footerHelpList2')}</p>
+          <p>{t('common:footerHelpList3')}</p>
+          <p>{t('common:footerHelpList4')}</p>
         </div>
       </div>
       {/* bottom */}

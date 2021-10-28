@@ -1,8 +1,10 @@
 import Image from 'next/image';
-import Button from './Button';
 import GreenSpan from './GreenSpan';
+import useTranslation from 'next-translate/useTranslation';
 
 function GetMobileContainer() {
+  const { t } = useTranslation();
+
   return (
     <div className="get-mobile-container">
       {/* Left Section */}
@@ -13,10 +15,10 @@ function GetMobileContainer() {
       </section>
       {/* Right Section */}
       <section className="right">
-        <GreenSpan text="Unduh" />
-        <h2>Dapatkan Aplikasi</h2>
+        <GreenSpan text={t('common:mobileGreenSpan')} />
+        <h2>{t('common:mobileTitle')}</h2>
         <div className="p-right">
-          <p>Aplikasi kami tersedia di Play Store dan App Store yang bisa anda unduh secara gratis dan nikmati pengalaman yang lebih memuaskan dengan aplikasi kami.</p>
+          <p>{t('common:mobileDesc')}</p>
         </div>
         <div className="btn-container">
           <div className="app-img-container">

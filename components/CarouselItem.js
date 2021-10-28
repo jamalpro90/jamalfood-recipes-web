@@ -1,13 +1,17 @@
 import Image from 'next/image';
 import GreenSpan from './GreenSpan';
-import { sliderFoods } from '../data/SliderFoods';
+import { sliderFoodsId } from '../data/SliderFoodsId';
+import { sliderFoodsEn } from '../data/SliderFoodsEn';
 import { useState } from 'react';
+import { useRouter } from 'next/dist/client/router';
 
 function CarouselItem() {
+  const router = useRouter();
   const [count, setCount] = useState(0);
   const prevArrow = () => (count > 0 ? setCount(count - 1) : setCount(sliderFoods.length - 1));
   const nextArrow = () => (count < sliderFoods.length - 1 ? setCount(count + 1) : setCount(0));
 
+  const sliderFoods = router.locale === 'id' ? sliderFoodsId : sliderFoodsEn;
   const { greenSpan, title, desc, cookTime, image, thumbs } = sliderFoods[count];
 
   return (
@@ -41,7 +45,7 @@ function CarouselItem() {
         {/* right */}
         <div className="right">
           <div className="img-container">
-            <Image className="caro-img" src={image} alt="image" width={400} height={340} layout="responsive" />
+            <Image className="caro-img" src={image} alt="image" width={500} height={340} layout="responsive" />
           </div>
         </div>
       </div>

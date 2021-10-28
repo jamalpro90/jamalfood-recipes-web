@@ -67,6 +67,7 @@
           display: flex;
           align-items: center;
           margin-top: 1rem;
+          flex-wrap: wrap;
 
           .thumb {
             background-color: #eee;
@@ -94,8 +95,10 @@
         flex: 1;
         // border: 1px solid blue;
         .img-container {
+          width: 100%;
           .caro-img {
             border-radius: 5px;
+            object-fit: cover;
           }
         }
       }
@@ -124,13 +127,57 @@
   .caro-container .caro .left-and-right {
     flex-direction: column-reverse;
 
-    .right .img-container {
+    .left p {
       width: 80%;
+    }
+
+    .right .img-container {
+      max-width: 100%;
       margin: 0 auto;
       padding: 3rem 0;
     }
   }
+  .caro-container .caro {
+    .prev {
+      left: -4rem;
+      width: 3rem;
+    }
+
+    .next {
+      right: -3rem;
+      width: 3rem;
+    }
+
+    .dots {
+      bottom: 15rem;
+
+      span {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 544px) {
   .caro-container .caro .dots {
-    bottom: 15rem;
+    bottom: 18rem;
+  }
+}
+
+@media (max-width: 412px) {
+  .caro-container .caro .dots {
+    bottom: 19rem;
+  }
+}
+
+@media (max-width: 337px) {
+  .caro-container .caro .dots {
+    bottom: 16.8rem;
+  }
+}
+
+@media (max-width: 316px) {
+  .caro-container .caro .dots {
+    bottom: 18rem;
   }
 }
