@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer>
       {/* top */}
-      <div className="top">
+      <div data-aos="fade-up" className="top">
         <div className="top-section">
           <h5 className="brand">
             Jamal<span>Food</span>
