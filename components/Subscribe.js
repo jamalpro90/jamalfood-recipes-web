@@ -4,7 +4,7 @@ function Subscribe() {
   const { t } = useTranslation();
 
   return (
-    <div className="subscribe-container">
+    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" className="subscribe-container">
       <div className="subscribe">
         <h3>{t('common:subscribeTitle')}</h3>
         <div className="input-box">

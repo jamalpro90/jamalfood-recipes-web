@@ -9,18 +9,18 @@ function GetMobileContainer() {
     <div className="get-mobile-container">
       {/* Left Section */}
       <section className="left">
-        <div className="img-container">
+        <div data-aos="flip-right" data-aos-duration="2000" className="img-container">
           <Image className="img" src="/img/mobile-app-design.png" alt="pangsit" width={250} height={550} layout="responsive" />
         </div>
       </section>
       {/* Right Section */}
       <section className="right">
         <GreenSpan text={t('common:mobileGreenSpan')} />
-        <h2>{t('common:mobileTitle')}</h2>
-        <div className="p-right">
+        <h2 data-aos="fade-left">{t('common:mobileTitle')}</h2>
+        <div data-aos="fade-left" className="p-right">
           <p>{t('common:mobileDesc')}</p>
         </div>
-        <div className="btn-container">
+        <div data-aos="fade-up-left" data-aos-duration="1400" className="btn-container">
           <div className="app-img-container">
             <Image src="/img/plays-store.png" alt="google play image" width={170} height={130} />
           </div>

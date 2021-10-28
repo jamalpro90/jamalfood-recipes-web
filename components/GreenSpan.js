@@ -1,5 +1,9 @@
 function GreenSpan({ text }) {
-  return <span className="green-span">{text}</span>;
+  return (
+    <div data-aos="zoom-in">
+      <span className="green-span">{text}</span>
+    </div>
+  );
 }
 
 export default GreenSpan;

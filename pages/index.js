@@ -6,8 +6,14 @@ import Layout from '../components/Layout';
 import PopulerFoods from '../components/PopulerFoods';
 import Subscribe from '../components/Subscribe';
 import VarietyRecipes from '../components/VarietyRecipes';
+import { useEffect } from 'react';
+import Aos from 'aos';
 
 export default function Home() {
+  useEffect(() => {
+    Aos.init({ duration: 1400, once: true });
+  }, []);
+
   return (
     <Layout title="Home">
       <Hero />

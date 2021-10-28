@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <div className="nav-container">
+    <div data-aos="fade-down" className="nav-container">
       {/* nav top */}
       <div className="nav-top">
         {/* Brand */}

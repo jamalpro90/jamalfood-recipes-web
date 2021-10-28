@@ -25,8 +25,10 @@ function CarouselItem() {
         {/* left */}
         <div className="left">
           <GreenSpan text={greenSpan} />
-          <h3>{title}</h3>
-          <p>{desc}</p>
+          <h3 data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+            {title}
+          </h3>
+          <p data-aos="fade-right">{desc}</p>
           <p className="time-cook">
             {cookTime}
             <svg xmlns="http://www.w3.org/2000/svg" className="watch-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -35,7 +37,7 @@ function CarouselItem() {
           </p>
           <div className="thumb-container">
             {thumbs.map((image, i) => (
-              <div key={i} className="thumb">
+              <div key={i} data-aos="flip-right" data-aos-duration="3000" className="thumb">
                 <Image src={image} alt="image" width={48} height={48} layout="responsive" />
               </div>
             ))}
@@ -44,7 +46,7 @@ function CarouselItem() {
         </div>
         {/* right */}
         <div className="right">
-          <div className="img-container">
+          <div data-aos="zoom-in-up" className="img-container">
             <Image className="caro-img" src={image} alt="image" width={500} height={340} layout="responsive" />
           </div>
         </div>

@@ -7,11 +7,11 @@ function PopulerFoods() {
 
   return (
     <div className="populer-food">
-      <h3>{t('common:popularTitle')}</h3>
-      <p>{t('common:popularDesc')}</p>
+      <h3 data-aos="fade-down-right">{t('common:popularTitle')}</h3>
+      <p data-aos="fade-left">{t('common:popularDesc')}</p>
       <div className="img-container">
         {populerFoodsImg.map((imgUrl, i) => (
-          <img key={i} src={imgUrl} alt="food image" />
+          <img key={i} data-aos="flip-left" src={imgUrl} alt="food image" />
         ))}
       </div>
     </div>
