@@ -6,7 +6,7 @@ function GetMobileContainer() {
   const { t } = useTranslation();
 
   return (
-    <div className="get-mobile-container">
+    <div id="mobile-app" className="get-mobile-container">
       {/* Left Section */}
       <section className="left">
         <div data-aos="flip-right" data-aos-duration="2000" className="img-container">
@@ -21,10 +21,10 @@ function GetMobileContainer() {
           <p>{t('common:mobileDesc')}</p>
         </div>
         <div data-aos="fade-up-left" data-aos-duration="1400" className="btn-container">
-          <div className="app-img-container">
+          <div className="app-img-container" onClick={() => alert(t('common:notAvailable'))}>
             <Image src="/img/plays-store.png" alt="google play image" width={170} height={130} />
           </div>
-          <div className="app-img-container">
+          <div className="app-img-container" onClick={() => alert(t('common:notAvailable'))}>
             <Image src="/img/app-store.png" alt="google play image" width={180} height={63} />
           </div>
         </div>

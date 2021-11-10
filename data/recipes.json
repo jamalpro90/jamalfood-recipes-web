@@ -1,0 +1,156 @@
+{
+  "id": [
+    {
+      "name": "Nasi Goreng Jawa",
+      "ingridients": ["Nasi", "Ayam", "Telur", "Sayur", "Bawang putih", "Bawang merah", "Kecap manis", "dll"],
+      "howToCook": [
+        "1.Tumis bawang putih & bawang merah",
+        "2. Masukan terlor orak arik",
+        "3. Masukan nasi usahakan nasi dingin",
+        "4. Masukan garam, kaldu bubuk, lada, saus raja, micin secukupnya",
+        "5. Masukan sayuran yang dipotong kecil-kecil",
+        "6. Tambah sedikit kecap manis",
+        "7. Masukan ayam yang sudah dipotong kecil-kecil",
+        "8. Goreng hingga matang"
+      ],
+      "video": "https://ideos.kuy"
+    },
+    {
+      "name": "Nasi Goreng Merah",
+      "ingridients": ["Nasi", "Ayam", "Telur", "Sayur", "Bawang putih", "Bawang merah", "Kecap manis", "dll"],
+      "howToCook": [
+        "1.Tumis bawang putih & bawang merah",
+        "2. Masukan terlor orak arik",
+        "3. Masukan nasi usahakan nasi dingin",
+        "4. Masukan garam, kaldu bubuk, lada, saus raja, micin secukupnya",
+        "5. Masukan sayuran yang dipotong kecil-kecil",
+        "6. Tambah sedikit kecap manis",
+        "7. Masukan ayam yang sudah dipotong kecil-kecil",
+        "8. Goreng hingga matang"
+      ],
+      "video": "https://ideos.kuy"
+    },
+    {
+      "name": "Nasi Goreng Mawut",
+      "ingridients": ["Nasi", "Ayam", "Telur", "Sayur", "Bawang putih", "Bawang merah", "Kecap manis", "dll"],
+      "howToCook": [
+        "1.Tumis bawang putih & bawang merah",
+        "2. Masukan terlor orak arik",
+        "3. Masukan nasi usahakan nasi dingin",
+        "4. Masukan garam, kaldu bubuk, lada, saus raja, micin secukupnya",
+        "5. Masukan sayuran yang dipotong kecil-kecil",
+        "6. Tambah sedikit kecap manis",
+        "7. Masukan ayam yang sudah dipotong kecil-kecil",
+        "8. Goreng hingga matang"
+      ],
+      "video": "https://ideos.kuy"
+    },
+    {
+      "name": "Nasi Goreng Seafood",
+      "ingridients": ["Nasi", "Ayam", "Telur", "Sayur", "Bawang putih", "Bawang merah", "Kecap manis", "dll"],
+      "howToCook": [
+        "1.Tumis bawang putih & bawang merah",
+        "2. Masukan terlor orak arik",
+        "3. Masukan nasi usahakan nasi dingin",
+        "4. Masukan garam, kaldu bubuk, lada, saus raja, micin secukupnya",
+        "5. Masukan sayuran yang dipotong kecil-kecil",
+        "6. Tambah sedikit kecap manis",
+        "7. Masukan ayam yang sudah dipotong kecil-kecil",
+        "8. Goreng hingga matang"
+      ],
+      "video": "https://ideos.kuy"
+    },
+    {
+      "name": "Nasi Goreng Putih",
+      "ingridients": ["Nasi", "Ayam", "Telur", "Sayur", "Bawang putih", "Bawang merah", "Kecap manis", "dll"],
+      "howToCook": [
+        "1.Tumis bawang putih & bawang merah",
+        "2. Masukan terlor orak arik",
+        "3. Masukan nasi usahakan nasi dingin",
+        "4. Masukan garam, kaldu bubuk, lada, saus raja, micin secukupnya",
+        "5. Masukan sayuran yang dipotong kecil-kecil",
+        "6. Tambah sedikit kecap manis",
+        "7. Masukan ayam yang sudah dipotong kecil-kecil",
+        "8. Goreng hingga matang"
+      ],
+      "video": "https://ideos.kuy"
+    }
+  ],
+  "en": [
+    {
+      "name": "Fried Rice Jawa",
+      "ingridients": ["Rice", "Chicken", "Egg", "Vegetable", "Garlic", "Shallot", "Sweet Soy Sauce", "etc"],
+      "howToCook": [
+        "1. Saute garlic & onion",
+        "2. Enter scrambled terlor",
+        "3. Put in the rice, try cold rice",
+        "4. Add salt, powdered stock, pepper, king sauce, micin to taste",
+        "5. Enter the vegetables cut into small pieces",
+        "6. Add a little sweet soy sauce",
+        "7. Enter the chicken that has been cut into small pieces",
+        "8. Fry until cooked"
+      ],
+      "video": "https://ideos.kuy"
+    },
+    {
+      "name": "Fried Rice Merah",
+      "ingridients": ["Rice", "Chicken", "Egg", "Vegetable", "Garlic", "Shallot", "Sweet Soy Sauce", "etc"],
+      "howToCook": [
+        "1. Saute garlic & onion",
+        "2. Enter scrambled terlor",
+        "3. Put in the rice, try cold rice",
+        "4. Add salt, powdered stock, pepper, king sauce, micin to taste",
+        "5. Enter the vegetables cut into small pieces",
+        "6. Add a little sweet soy sauce",
+        "7. Enter the chicken that has been cut into small pieces",
+        "8. Fry until cooked"
+      ],
+      "video": "https://ideos.kuy"
+    },
+    {
+      "name": "Fried Rice Mawut",
+      "ingridients": ["Rice", "Chicken", "Egg", "Vegetable", "Garlic", "Shallot", "Sweet Soy Sauce", "etc"],
+      "howToCook": [
+        "1. Saute garlic & onion",
+        "2. Enter scrambled terlor",
+        "3. Put in the rice, try cold rice",
+        "4. Add salt, powdered stock, pepper, king sauce, micin to taste",
+        "5. Enter the vegetables cut into small pieces",
+        "6. Add a little sweet soy sauce",
+        "7. Enter the chicken that has been cut into small pieces",
+        "8. Fry until cooked"
+      ],
+      "video": "https://ideos.kuy"
+    },
+    {
+      "name": "Fried Rice Seafood",
+      "ingridients": ["Rice", "Chicken", "Egg", "Vegetable", "Garlic", "Shallot", "Sweet Soy Sauce", "etc"],
+      "howToCook": [
+        "1. Saute garlic & onion",
+        "2. Enter scrambled terlor",
+        "3. Put in the rice, try cold rice",
+        "4. Add salt, powdered stock, pepper, king sauce, micin to taste",
+        "5. Enter the vegetables cut into small pieces",
+        "6. Add a little sweet soy sauce",
+        "7. Enter the chicken that has been cut into small pieces",
+        "8. Fry until cooked"
+      ],
+      "video": "https://ideos.kuy"
+    },
+    {
+      "name": "Fried Rice Putih",
+      "ingridients": ["Rice", "Chicken", "Egg", "Vegetable", "Garlic", "Shallot", "Sweet Soy Sauce", "etc"],
+      "howToCook": [
+        "1. Saute garlic & onion",
+        "2. Enter scrambled terlor",
+        "3. Put in the rice, try cold rice",
+        "4. Add salt, powdered stock, pepper, king sauce, micin to taste",
+        "5. Enter the vegetables cut into small pieces",
+        "6. Add a little sweet soy sauce",
+        "7. Enter the chicken that has been cut into small pieces",
+        "8. Fry until cooked"
+      ],
+      "video": "https://ideos.kuy"
+    }
+  ]
+}

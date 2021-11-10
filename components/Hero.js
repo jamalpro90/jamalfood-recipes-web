@@ -5,6 +5,11 @@ import useTranslation from 'next-translate/useTranslation';
 function Hero() {
   const { t } = useTranslation();
 
+  const handleFocusSearch = () => {
+    document.querySelector('.search-box input').focus();
+    document.querySelector('.nav-middle .search-box input').focus();
+  };
+
   return (
     <div className="hero-container">
       {/* Left Section */}
@@ -15,8 +20,8 @@ function Hero() {
           <p>{t('common:heroDesc2')}</p>
         </div>
         <div data-aos="fade-up" className="btn-container">
-          <Button text={t('common:heroBtn1')} />
-          <Button text={t('common:heroBtn2')} outlined />
+          <Button text={t('common:heroBtn1')} onClick={() => alert(t('common:notAvailable'))} />
+          <Button text={t('common:heroBtn2')} onClick={handleFocusSearch} outlined />
         </div>
       </section>
       {/* Right Section */}

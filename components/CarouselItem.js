@@ -37,7 +37,7 @@ function CarouselItem() {
           </p>
           <div className="thumb-container">
             {thumbs.map((image, i) => (
-              <div key={i} data-aos="flip-right" data-aos-duration="3000" className="thumb">
+              <div key={i} data-aos-duration="3000" className="thumb">
                 <Image src={image} alt="image" width={48} height={48} layout="responsive" />
               </div>
             ))}

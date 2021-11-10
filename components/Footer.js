@@ -4,7 +4,7 @@ function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer>
+    <footer id="footer">
       {/* top */}
       <div data-aos="fade-up" className="top">
         <div className="top-section">

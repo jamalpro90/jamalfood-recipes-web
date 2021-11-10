@@ -22,7 +22,7 @@ function VarietyRecipes() {
           <p>{t('common:variDesc')}</p>
         </div>
         <div data-aos="fade-up" className="btn-container">
-          <Button text={t('common:variBtn')} />
+          <Button text={t('common:variBtn')} onClick={() => alert(t('common:notAvailable'))} />
         </div>
       </section>
     </div>

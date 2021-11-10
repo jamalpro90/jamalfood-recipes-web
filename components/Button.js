@@ -1,4 +1,4 @@
-function Button({ text, outlined }) {
+function Button({ text, outlined, onClick }) {
   const styleBtn = (outlined) => {
     if (outlined) {
       return 'btn-container-outlined';
@@ -8,7 +8,7 @@ function Button({ text, outlined }) {
   };
 
   return (
-    <div className={styleBtn(outlined)}>
+    <div className={styleBtn(outlined)} onClick={onClick}>
       <button>{text}</button>
     </div>
   );

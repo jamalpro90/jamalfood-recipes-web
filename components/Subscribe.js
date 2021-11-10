@@ -11,7 +11,7 @@ function Subscribe() {
           <i className="far fa-envelope"></i>
           <input type="text" placeholder={t('common:subscribePh')} />
         </div>
-        <div className="btn-container">
+        <div className="btn-container" onClick={() => alert(t('common:notAvailable'))}>
           <button>{t('common:subscribeBtn')}</button>
         </div>
       </div>

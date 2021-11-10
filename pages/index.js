@@ -8,6 +8,7 @@ import Subscribe from '../components/Subscribe';
 import VarietyRecipes from '../components/VarietyRecipes';
 import { useEffect } from 'react';
 import Aos from 'aos';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <Layout title="Home">
+      <Navbar />
       <Hero />
       <PopulerFoods />
       <VarietyRecipes />
