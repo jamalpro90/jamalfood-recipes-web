@@ -1,7 +1,5 @@
-import useTranslation from 'next-translate/useTranslation';
-
 function Footer() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <footer id="footer">
@@ -11,27 +9,30 @@ function Footer() {
           <h5 className="brand">
             Jamal<span>Food</span>
           </h5>
-          <p>{t('common:footerBrandDesc')}</p>
+          <p>
+            JamalFood is an application to find various food and beverage
+            recipes
+          </p>
         </div>
         <div className="top-section list">
-          <h5>{t('common:footerAboutTitle')}</h5>
-          <p>{t('common:footerAboutList1')}</p>
-          <p>{t('common:footerAboutList2')}</p>
-          <p>{t('common:footerAboutList3')}</p>
-          <p>{t('common:footerAboutList4')}</p>
+          <h5>About</h5>
+          <p>About Us</p>
+          <p>Recipes</p>
+          <p>Download</p>
+          <p>Contact</p>
         </div>
         <div className="top-section list">
-          <h5>{t('common:footerCompanyTitle')}</h5>
-          <p>{t('common:footerCompanyList1')}</p>
-          <p>{t('common:footerCompanyList2')}</p>
-          <p>{t('common:footerCompanyList3')}</p>
+          <h5>Company</h5>
+          <p>Our Recipes</p>
+          <p>Subscribe</p>
+          <p>FAQ</p>
         </div>
         <div className="top-section list">
-          <h5>{t('common:footerHelpTitle')}</h5>
-          <p>{t('common:footerHelpList1')}</p>
-          <p>{t('common:footerHelpList2')}</p>
-          <p>{t('common:footerHelpList3')}</p>
-          <p>{t('common:footerHelpList4')}</p>
+          <h5>Help</h5>
+          <p>Help Center</p>
+          <p>Account</p>
+          <p>Advices</p>
+          <p>Accessibility</p>
         </div>
       </div>
       {/* bottom */}

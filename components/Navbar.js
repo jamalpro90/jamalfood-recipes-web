@@ -1,28 +1,21 @@
-import useTranslation from 'next-translate/useTranslation';
-import { useRouter } from 'next/dist/client/router';
-import Link from 'next/link';
-import { useState } from 'react';
-import recipesIdEn from '../data/recipes.json';
-import Brand from './Brand';
+import Link from "next/link";
+import { useState } from "react";
+import recipesIdEn from "../data/recipes.json";
+import Brand from "./Brand";
 
 function Navbar() {
-  const { t } = useTranslation();
-  const router = useRouter();
   const [filteredRecipes, setFilteredRecipes] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
-  const recipes = router.locale === 'id' ? recipesIdEn.id : recipesIdEn.en;
+  const [searchValue, setSearchValue] = useState("");
+  const recipes = recipesIdEn.en;
 
-  const handleChangeLanguage = (e) => {
-    const locale = e.target.value;
-    router.push('/', '/', { locale });
-  };
-
-  const handleSearchValue = (e) => {
+  const handleSearchValue = e => {
     const inputValue = e.target.value;
     setSearchValue(inputValue);
-    const newFilterRecipes = recipes.filter((val) => val.name.toLowerCase().includes(inputValue.toLowerCase()));
+    const newFilterRecipes = recipes.filter(val =>
+      val.name.toLowerCase().includes(inputValue.toLowerCase())
+    );
 
-    if (inputValue === '') {
+    if (inputValue === "") {
       setFilteredRecipes([]);
     } else {
       setFilteredRecipes(newFilterRecipes);
@@ -30,8 +23,8 @@ function Navbar() {
   };
 
   const handleFocusSearch = () => {
-    document.querySelector('.search-box input').focus();
-    document.querySelector('.nav-middle .search-box input').focus();
+    document.querySelector(".search-box input").focus();
+    document.querySelector(".nav-middle .search-box input").focus();
   };
 
   // const handleFocusSearchMobile = () => {
@@ -49,35 +42,45 @@ function Navbar() {
         <ul className="nav-item-container">
           <li>
             <Link href="/">
-              <a>{t('common:navList1')}</a>
+              <a>Home</a>
             </Link>
           </li>
-          <li onClick={() => alert(t('common:notAvailable'))}>
-            <a>{t('common:navList2')}</a>
+          <li onClick={() => alert(t("common:notAvailable"))}>
+            <a>About</a>
           </li>
           <li onClick={handleFocusSearch}>
-            <a>{t('common:navList3')}</a>
+            <a>Recipes</a>
           </li>
           <li>
-            <a href="#mobile-app">{t('common:navList4')}</a>
+            <a href="#mobile-app">Download</a>
           </li>
           <li>
-            <a href="#footer">{t('common:navList5')}</a>
-          </li>
-          <li>
-            <select defaultValue={router.locale} name="language" onChange={handleChangeLanguage}>
-              <option value="id">ID</option>
-              <option value="en">EN</option>
-            </select>
+            <a href="#footer">Contact</a>
           </li>
         </ul>
         {/* Search Box */}
         <div className="search-box">
           <div className="nav-search">
-            <svg xmlns="http://www.w3.org/2000/svg" className="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="search-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
             </svg>
-            <input type="text" placeholder={t('common:navSearch')} value={searchValue} onChange={handleSearchValue} />
+            <input
+              type="text"
+              placeholder="Search Recipes"
+              value={searchValue}
+              onChange={handleSearchValue}
+            />
           </div>
           {/* Search Results */}
           {filteredRecipes.length > 0 && (
@@ -95,10 +98,27 @@ function Navbar() {
       <div className="nav-middle">
         <div className="search-box">
           <div className="nav-search">
-            <svg xmlns="http://www.w3.org/2000/svg" className="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="search-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
             </svg>
-            <input className="input-mobile" type="text" placeholder={t('common:navSearch')} value={searchValue} onChange={handleSearchValue} />
+            <input
+              className="input-mobile"
+              type="text"
+              placeholder="Search Recipes"
+              value={searchValue}
+              onChange={handleSearchValue}
+            />
           </div>
           {/* Search Results */}
           {filteredRecipes.length > 0 && (
@@ -117,26 +137,20 @@ function Navbar() {
         <ul className="nav-item-container">
           <li>
             <Link href="/">
-              <a>{t('common:navList1')}</a>
+              <a>Home</a>
             </Link>
           </li>
-          <li onClick={() => alert(t('common:notAvailable'))}>
-            <a>{t('common:navList2')}</a>
+          <li onClick={() => alert("Not Available")}>
+            <a>About</a>
           </li>
           <li onClick={handleFocusSearch}>
-            <a>{t('common:navList3')}</a>
+            <a>Recipes</a>
           </li>
           <li>
-            <a href="#mobile-app">{t('common:navList4')}</a>
+            <a href="#mobile-app">Download</a>
           </li>
           <li>
-            <a href="#footer">{t('common:navList5')}</a>
-          </li>
-          <li>
-            <select defaultValue={router.locale} name="language" onChange={handleChangeLanguage}>
-              <option value="id">ID</option>
-              <option value="en">EN</option>
-            </select>
+            <a href="#footer">Contact</a>
           </li>
         </ul>
       </div>

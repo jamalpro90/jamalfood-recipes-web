@@ -1,28 +1,36 @@
-import Image from 'next/image';
-import Button from './Button';
-import GreenSpan from './GreenSpan';
-import useTranslation from 'next-translate/useTranslation';
+import Image from "next/image";
+import Button from "./Button";
+import GreenSpan from "./GreenSpan";
 
 function VarietyRecipes() {
-  const { t } = useTranslation();
-
   return (
     <div className="vari-container">
       {/* Left Section */}
       <section className="left">
         <div data-aos="fade-right" className="img-container">
-          <Image className="img" src="/img/variety-recipes2.png" alt="pangsit" width={640} height={426} layout="responsive" />
+          <Image
+            className="img"
+            src="/img/variety-recipes2.png"
+            alt="pangsit"
+            width={640}
+            height={426}
+            layout="responsive"
+          />
         </div>
       </section>
+
       {/* Right Section */}
       <section className="right">
-        <GreenSpan text={t('common:variGreenSpan')} />
-        <h2 data-aos="fade-down-left">{t('common:variTitle')}</h2>
+        <GreenSpan text={`Foods & Drinks`} />
+        <h2 data-aos="fade-down-left">Variety Of Dood And Drink Recipes</h2>
         <div data-aos="fade-left" className="p-right">
-          <p>{t('common:variDesc')}</p>
+          <p>
+            We have many variations of recipes for food and drink recipes from
+            trusted chefs, with clear cooking methods and delicious flavors.
+          </p>
         </div>
         <div data-aos="fade-up" className="btn-container">
-          <Button text={t('common:variBtn')} onClick={() => alert(t('common:notAvailable'))} />
+          <Button text="See Menu" onClick={() => alert("Not Available")} />
         </div>
       </section>
     </div>
