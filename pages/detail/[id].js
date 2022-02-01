@@ -3,12 +3,14 @@ import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Aos from "aos";
 
 function DetailId({ meal }) {
   const [ingredients, setIngredients] = useState([]);
-  const [urlYoutube, setUrlYoutube] = useState("");
 
   useEffect(() => {
+    Aos.init({ duration: 1400, once: true });
+
     // cari dan grouping ingredients
     const arr = [];
     for (const ing in meal) {
@@ -16,10 +18,8 @@ function DetailId({ meal }) {
         arr.push(meal[ing]);
       }
     }
-    setIngredients(arr);
 
-    // ubah url youtube agar bisa dilihat secara embed
-    // let newUrl = meal.strYoutube.replace('watch?v=', 'embed/')
+    setIngredients(arr);
   }, []);
 
   return (
@@ -56,15 +56,16 @@ function DetailId({ meal }) {
 
         <div className="videos-cotnainer menu-title">
           <h2>Videos :</h2>
-          <iframe
-            width="560"
-            height="315"
-            src={meal.strYoutube.replace("watch?v=", "embed/")}
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <div className="videos">
+            <iframe
+              className="responsive-iframe"
+              src={meal.strYoutube.replace("watch?v=", "embed/")}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
 

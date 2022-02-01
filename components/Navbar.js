@@ -1,19 +1,26 @@
-import Link from "next/link";
-import { useState } from "react";
-import recipesIdEn from "../data/recipes.json";
+import { useRef, useState } from "react";
 import Brand from "./Brand";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Navbar() {
   const [searchValue, setSearchValue] = useState("");
+  const router = useRouter();
 
   const handleSearchValue = e => {
     setSearchValue(e.target.value);
-    // console.log(searchValue);
   };
 
   const handleFocusSearch = () => {
     document.querySelector(".search-box input").focus();
     document.querySelector(".nav-middle .search-box input").focus();
+  };
+
+  const handleTriggerEnter = e => {
+    if (e.key === "Enter" && searchValue !== "") {
+      setSearchValue("");
+      router.push(`/detail?text=${searchValue}`);
+    }
   };
 
   return (
@@ -69,15 +76,17 @@ function Navbar() {
               placeholder="Search Recipes"
               value={searchValue}
               onChange={e => handleSearchValue(e)}
+              onKeyUp={e => handleTriggerEnter(e)}
             />
           </div>
         </div>
       </div>
-      {/* Nav Middle */}
+      {/* Nav Middle For Search Box */}
       <div className="nav-middle">
         <div className="search-box">
           <div className="nav-search">
             <svg
+              onClick={() => setSearchValue("")}
               xmlns="http://www.w3.org/2000/svg"
               className="search-icon"
               fill="none"
@@ -96,7 +105,7 @@ function Navbar() {
               type="text"
               placeholder="Search Recipes"
               value={searchValue}
-              // onChange={handleSearchValue}
+              onChange={e => handleSearchValue(e)}
             />
           </div>
         </div>

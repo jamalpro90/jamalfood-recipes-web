@@ -1,12 +1,16 @@
-import React from "react";
+import { useEffect } from "react";
 import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import Aos from "aos";
+import Footer from "../../components/Footer";
 
-export default function Detail({ query, mealList }) {
-  console.log(query);
-  console.log(mealList);
+export default function Detail({ mealList }) {
+  useEffect(() => {
+    Aos.init({ duration: 1400, once: true });
+  }, []);
+
   return (
     <Layout title="Detail">
       <Navbar />
@@ -28,6 +32,8 @@ export default function Detail({ query, mealList }) {
             </Link>
           ))}
       </div>
+
+      <Footer />
     </Layout>
   );
 }
@@ -38,5 +44,5 @@ export async function getServerSideProps({ query }) {
   );
   const data = await res.json();
 
-  return { props: { query: query.text, mealList: data.meals } };
+  return { props: { mealList: data.meals } };
 }
