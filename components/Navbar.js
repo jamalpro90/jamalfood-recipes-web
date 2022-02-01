@@ -106,6 +106,7 @@ function Navbar() {
               placeholder="Search Recipes"
               value={searchValue}
               onChange={e => handleSearchValue(e)}
+              onKeyUp={e => handleTriggerEnter(e)}
             />
           </div>
         </div>

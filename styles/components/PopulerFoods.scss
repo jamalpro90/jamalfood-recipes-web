@@ -1,4 +1,4 @@
-@import '../variabel.scss';
+@import "../variabel.scss";
 
 .populer-food {
   background-color: $secondary-background;
@@ -11,14 +11,14 @@
 
   h3 {
     font-size: 3rem;
-    font-family: 'Bitter', serif;
+    font-family: "Bitter", serif;
     text-align: center;
   }
 
   p {
     text-align: center;
     color: $secondary-font;
-    margin: 1rem 0;
+    margin: 1rem 1rem;
   }
 
   .img-container {
@@ -29,23 +29,70 @@
     align-items: center;
     margin: auto;
 
-    img {
-      border-radius: 50%;
-      width: 120px;
-      height: 100px;
-      margin: 1rem;
-      cursor: pointer;
-      transition: all 0.2s;
+    .img-self {
+      position: relative;
 
-      &:hover {
-        transform: scale(1.2);
+      img {
+        border-radius: 50%;
+        width: 120px;
+        height: 100px;
+        margin: 1rem;
+        cursor: pointer;
+      }
+
+      .img-name {
+        position: absolute;
+        top: 11%;
+        left: 11%;
+        background-color: transparent;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 120px;
+        height: 100px;
+        transition: 0.2s;
+        z-index: 99;
+        cursor: no-drop;
+
+        p {
+          color: transparent;
+          transition: 0.2s;
+        }
+
+        &:active {
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        &:active p {
+          color: white;
+        }
       }
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .populer-food {
+    .img-container {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .populer-food {
+    padding: 0;
   }
 }
 
 @media (max-width: 500px) {
   .populer-food h3 {
     font-size: 2.5rem;
+
+    .img-container {
+      width: 100%;
+    }
   }
 }
