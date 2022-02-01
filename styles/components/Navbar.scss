@@ -1,4 +1,4 @@
-@import '../variabel.scss';
+@import "../variabel.scss";
 
 .nav-container {
   position: fixed;
@@ -47,6 +47,7 @@
       .search-icon {
         width: 30px;
         margin-right: 10px;
+        cursor: pointer;
       }
 
       input {

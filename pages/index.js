@@ -1,14 +1,14 @@
-import CarouselCom from '../components/CarouselCom';
-import Footer from '../components/Footer';
-import GetMobileApp from '../components/GetMobileApp';
-import Hero from '../components/Hero';
-import Layout from '../components/Layout';
-import PopulerFoods from '../components/PopulerFoods';
-import Subscribe from '../components/Subscribe';
-import VarietyRecipes from '../components/VarietyRecipes';
-import { useEffect } from 'react';
-import Aos from 'aos';
-import Navbar from '../components/Navbar';
+import Aos from "aos";
+import { useEffect } from "react";
+import CarouselCom from "../components/CarouselCom";
+import Footer from "../components/Footer";
+import GetMobileApp from "../components/GetMobileApp";
+import Hero from "../components/Hero";
+import Layout from "../components/Layout";
+import Navbar from "../components/Navbar";
+import PopulerFoods from "../components/PopulerFoods";
+import Subscribe from "../components/Subscribe";
+import VarietyRecipes from "../components/VarietyRecipes";
 
 export default function Home() {
   useEffect(() => {
@@ -28,3 +28,5 @@ export default function Home() {
     </Layout>
   );
 }
+
+// https://jsonplaceholder.typicode.com/users

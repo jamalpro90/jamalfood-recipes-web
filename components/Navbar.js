@@ -4,31 +4,17 @@ import recipesIdEn from "../data/recipes.json";
 import Brand from "./Brand";
 
 function Navbar() {
-  const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const recipes = recipesIdEn.en;
 
   const handleSearchValue = e => {
-    const inputValue = e.target.value;
-    setSearchValue(inputValue);
-    const newFilterRecipes = recipes.filter(val =>
-      val.name.toLowerCase().includes(inputValue.toLowerCase())
-    );
-
-    if (inputValue === "") {
-      setFilteredRecipes([]);
-    } else {
-      setFilteredRecipes(newFilterRecipes);
-    }
+    setSearchValue(e.target.value);
+    // console.log(searchValue);
   };
 
   const handleFocusSearch = () => {
     document.querySelector(".search-box input").focus();
     document.querySelector(".nav-middle .search-box input").focus();
   };
-
-  // const handleFocusSearchMobile = () => {
-  // };
 
   return (
     <div data-aos="fade-down" className="nav-container">
@@ -45,7 +31,7 @@ function Navbar() {
               <a>Home</a>
             </Link>
           </li>
-          <li onClick={() => alert(t("common:notAvailable"))}>
+          <li onClick={() => alert("Not Available")}>
             <a>About</a>
           </li>
           <li onClick={handleFocusSearch}>
@@ -61,37 +47,30 @@ function Navbar() {
         {/* Search Box */}
         <div className="search-box">
           <div className="nav-search">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="search-icon"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
+            <Link href={`/detail?text=${searchValue}`} passHref>
+              <svg
+                onClick={() => setSearchValue("")}
+                xmlns="http://www.w3.org/2000/svg"
+                className="search-icon"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </Link>
             <input
               type="text"
               placeholder="Search Recipes"
               value={searchValue}
-              onChange={handleSearchValue}
+              onChange={e => handleSearchValue(e)}
             />
           </div>
-          {/* Search Results */}
-          {filteredRecipes.length > 0 && (
-            <div className="search-results">
-              {filteredRecipes.map((recipe, i) => (
-                <Link href={`/detail/${recipe.name}`} key={i}>
-                  <a>{recipe.name}</a>
-                </Link>
-              ))}
-            </div>
-          )}
         </div>
       </div>
       {/* Nav Middle */}
@@ -117,19 +96,9 @@ function Navbar() {
               type="text"
               placeholder="Search Recipes"
               value={searchValue}
-              onChange={handleSearchValue}
+              // onChange={handleSearchValue}
             />
           </div>
-          {/* Search Results */}
-          {filteredRecipes.length > 0 && (
-            <div className="search-results">
-              {filteredRecipes.map((recipe, i) => (
-                <Link href={`/detail/${recipe.name}`} key={i}>
-                  <a>{recipe.name}</a>
-                </Link>
-              ))}
-            </div>
-          )}
         </div>
       </div>
       {/* Nav Bottom */}

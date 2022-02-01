@@ -1,9 +1,9 @@
-const nextTranslate = require('next-translate');
+const nextTranslate = require("next-translate");
 
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ["images.unsplash.com", "www.themealdb.com"],
   },
   ...nextTranslate(),
 };

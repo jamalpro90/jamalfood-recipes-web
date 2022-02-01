@@ -1,0 +1,59 @@
+@import "./variabel.scss";
+
+.meals-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 6rem;
+
+  .meal {
+    width: 300px;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+    margin: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    p {
+      margin: 10px 10px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .meals-container {
+    .meal {
+      width: 200px;
+      margin: 1.5rem;
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .meals-container {
+    padding-top: 12rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .meals-container {
+    .meal {
+      width: 150px;
+      margin: 0.7rem;
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,42 +1,85 @@
-import { useRouter } from "next/router";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import Navbar from "../../components/Navbar";
-import recipesIdEn from "../../data/recipes.json";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
-function DetailId() {
-  const router = useRouter();
-  const routerId = router.query.id;
+function DetailId({ meal }) {
+  const [ingredients, setIngredients] = useState([]);
+  const [urlYoutube, setUrlYoutube] = useState("");
 
-  const recipes = recipesIdEn.en;
-  const recipeIndex = recipes.filter(val => val.name === routerId);
-  const recipe = recipeIndex[0];
+  useEffect(() => {
+    // cari dan grouping ingredients
+    const arr = [];
+    for (const ing in meal) {
+      if (ing.includes("strIngredient") && meal[ing] !== "") {
+        arr.push(meal[ing]);
+      }
+    }
+    setIngredients(arr);
+
+    // ubah url youtube agar bisa dilihat secara embed
+    // let newUrl = meal.strYoutube.replace('watch?v=', 'embed/')
+  }, []);
 
   return (
     <Layout title="Resep">
       <Navbar />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1 style={{ margin: "3rem" }}>{recipe.name}</h1>
-      <div className="ingridients" style={{ margin: 20 }}>
-        <h2>Ingredients :</h2>
-        {recipe.ingridients.map((val, i) => (
-          <p key={i}>
-            {i + 1}. {val}
-          </p>
-        ))}
+
+      <div className="meal-detail-container">
+        <h1 className="title">{meal.strMeal}</h1>
+        <div className="img-container">
+          <Image
+            src={meal.strMealThumb}
+            alt="Meal Image"
+            width={1080}
+            height={720}
+            layout="responsive"
+          />
+        </div>
+
+        <div className="ingredients-container menu-title">
+          <h2>Ingredients :</h2>
+          <div className="ingredients menu-content">
+            {ingredients.map((ing, i) => (
+              <p key={i}>
+                {i + 1} {ing}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        <div className="instructions-container menu-title">
+          <h2>Instructions :</h2>
+          <p className="instructions menu-content">{meal.strInstructions}</p>
+        </div>
+
+        <div className="videos-cotnainer menu-title">
+          <h2>Videos :</h2>
+          <iframe
+            width="560"
+            height="315"
+            src={meal.strYoutube.replace("watch?v=", "embed/")}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
-      <div className="how-to-cook" style={{ margin: 20 }}>
-        <h2>How To Cook :</h2>
-        {recipe.howToCook.map((val, i) => (
-          <p key={i}>{val}</p>
-        ))}
-      </div>
+
       <Footer />
     </Layout>
   );
 }
 
 export default DetailId;
+
+export async function getServerSideProps({ params }) {
+  const res = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`
+  );
+  const meal = await res.json();
+
+  return { props: { meal: meal.meals[0] } };
+}
