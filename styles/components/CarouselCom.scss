@@ -1,8 +1,8 @@
 .caro-container {
   padding: 4rem 2rem;
-  // border: 1px solid blue;
+  // border: 2px solid blue;
   background-color: $secondary-background;
-  min-height: 100vh;
+  min-height: 80vh;
   // width: 300vw;
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     width: 80%;
-    // border: 1px solid red;
+    // border: 2px solid red;
     position: relative;
 
     .prev {
@@ -42,7 +42,7 @@
         h3 {
           font-size: 2rem;
           padding: 1rem 0;
-          font-family: 'Bitter', serif;
+          font-family: "Bitter", serif;
         }
 
         p {
@@ -96,6 +96,7 @@
         // border: 1px solid blue;
         .img-container {
           width: 100%;
+
           .caro-img {
             border-radius: 5px;
             object-fit: cover;
@@ -159,8 +160,12 @@
 }
 
 @media (max-width: 544px) {
-  .caro-container .caro .dots {
-    bottom: 18rem;
+  .caro-container {
+    min-height: 70vh;
+
+    .caro .dots {
+      bottom: 18rem;
+    }
   }
 }
 

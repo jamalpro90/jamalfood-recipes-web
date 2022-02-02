@@ -10,19 +10,19 @@ import PopulerFoods from "../components/PopulerFoods";
 import Subscribe from "../components/Subscribe";
 import VarietyRecipes from "../components/VarietyRecipes";
 
-export default function Home({ mealsArea }) {
+export default function Home({ mealsArea, mealsVegan }) {
   useEffect(() => {
     Aos.init({ duration: 1400, once: true });
   }, []);
 
-  // console.log(mealsArea);
+  // console.log(mealsVegan);
   return (
     <Layout title="Home">
       <Navbar />
       <Hero />
       <PopulerFoods mealsArea={mealsArea} />
       <VarietyRecipes />
-      <CarouselCom />
+      <CarouselCom mealsVegan={mealsVegan} />
       <GetMobileApp />
       <Subscribe />
       <Footer />
@@ -36,5 +36,12 @@ export async function getServerSideProps() {
   );
   const mealsArea = await res.json();
 
-  return { props: { mealsArea: mealsArea.meals } };
+  const resVegan = await fetch(
+    "https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan"
+  );
+  const mealsVegan = await resVegan.json();
+
+  return {
+    props: { mealsArea: mealsArea.meals, mealsVegan: mealsVegan.meals },
+  };
 }

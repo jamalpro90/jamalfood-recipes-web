@@ -1,9 +1,9 @@
-import CarouselItem from './CarouselItem';
+import CarouselItem from "./CarouselItem";
 
-function CarouselCom() {
+function CarouselCom({ mealsVegan }) {
   return (
     <div className="caro-container">
-      <CarouselItem />
+      <CarouselItem mealsVegan={mealsVegan} />
     </div>
   );
 }

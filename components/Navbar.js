@@ -73,7 +73,7 @@ function Navbar() {
             </Link>
             <input
               type="text"
-              placeholder="Search Recipes"
+              placeholder="Search By Main Ingredient"
               value={searchValue}
               onChange={e => handleSearchValue(e)}
               onKeyUp={e => handleTriggerEnter(e)}
@@ -85,25 +85,27 @@ function Navbar() {
       <div className="nav-middle">
         <div className="search-box">
           <div className="nav-search">
-            <svg
-              onClick={() => setSearchValue("")}
-              xmlns="http://www.w3.org/2000/svg"
-              className="search-icon"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
+            <Link href={`/detail?text=${searchValue}`} passHref>
+              <svg
+                onClick={() => setSearchValue("")}
+                xmlns="http://www.w3.org/2000/svg"
+                className="search-icon"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </Link>
             <input
               className="input-mobile"
               type="text"
-              placeholder="Search Recipes"
+              placeholder="Search By Main Ingredient"
               value={searchValue}
               onChange={e => handleSearchValue(e)}
               onKeyUp={e => handleTriggerEnter(e)}
