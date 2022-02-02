@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Aos from "aos";
 
-function DetailId({ meal }) {
+function SeafoodId({ seafood }) {
   const [ingredients, setIngredients] = useState([]);
 
   useEffect(() => {
@@ -13,9 +13,9 @@ function DetailId({ meal }) {
 
     // cari dan grouping ingredients
     const arr = [];
-    for (const ing in meal) {
-      if (ing.includes("strIngredient") && meal[ing] !== "") {
-        arr.push(meal[ing]);
+    for (const ing in seafood) {
+      if (ing.includes("strIngredient") && seafood[ing] !== "") {
+        arr.push(seafood[ing]);
       }
     }
 
@@ -26,11 +26,11 @@ function DetailId({ meal }) {
     <Layout title="Resep">
       <Navbar />
 
-      <div className="meal-detail-container">
-        <h1 className="title">{meal.strMeal}</h1>
+      <div className="seafood-detail-container">
+        <h1 className="title">{seafood.strMeal}</h1>
         <div className="img-container">
           <Image
-            src={meal.strMealThumb}
+            src={seafood.strMealThumb}
             alt="Meal Image"
             width={1080}
             height={720}
@@ -39,7 +39,7 @@ function DetailId({ meal }) {
         </div>
 
         <div className="ingredients-container menu-title">
-          <h2>Ingredients :</h2>
+          <h2>Ingredients </h2>
           <div className="ingredients menu-content">
             {ingredients.map((ing, i) => (
               <p key={i}>
@@ -50,21 +50,21 @@ function DetailId({ meal }) {
         </div>
 
         <div className="instructions-container menu-title">
-          <h2>Instructions :</h2>
-          <p className="instructions menu-content">{meal.strInstructions}</p>
+          <h2>Instructions </h2>
+          <p className="instructions menu-content">{seafood.strInstructions}</p>
         </div>
 
         <div className="videos-cotnainer menu-title">
-          <h2>Videos :</h2>
+          <h2>Videos </h2>
           <div className="videos">
             <iframe
               className="responsive-iframe"
-              src={meal.strYoutube.replace("watch?v=", "embed/")}
+              src={seafood.strYoutube.replace("watch?v=", "embed/")}
               title="YouTube video player"
-              frameBorder="0"
               // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            ></iframe>
+              frameBorder={0}
+            />
           </div>
         </div>
       </div>
@@ -74,13 +74,13 @@ function DetailId({ meal }) {
   );
 }
 
-export default DetailId;
+export default SeafoodId;
 
 export async function getServerSideProps({ params }) {
   const res = await fetch(
     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`
   );
-  const meal = await res.json();
+  const seafood = await res.json();
 
-  return { props: { meal: meal.meals[0] } };
+  return { props: { seafood: seafood.meals[0] } };
 }

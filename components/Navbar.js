@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Brand from "./Brand";
 import Link from "next/link";
 import { useRouter } from "next/router";

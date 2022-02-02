@@ -1,0 +1,101 @@
+@import "./variabel.scss";
+
+.seafood-detail-container {
+  padding: 6rem 2rem 0 2rem;
+
+  .title {
+    text-align: center;
+    font-size: 4rem;
+    color: #222;
+  }
+
+  .img-container {
+    width: 70%;
+    // height: 500px;
+    border-radius: 15px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+
+  .menu-title {
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .menu-content {
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .instructions-container {
+    .instructions {
+      max-width: 80%;
+    }
+  }
+
+  .videos {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .seafood-detail-container {
+    padding: 12rem 2rem 0 2rem;
+
+    .title {
+      font-size: 3rem;
+    }
+
+    .menu-title {
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .menu-content {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .seafood-detail-container {
+    .title {
+      font-size: 2rem;
+    }
+
+    .menu-title {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .menu-content {
+        padding: 0;
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    .instructions-container .instructions {
+      max-width: 100%;
+    }
+  }
+}

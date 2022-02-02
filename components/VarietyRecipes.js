@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "./Button";
 import GreenSpan from "./GreenSpan";
+import Link from "next/link";
 
 function VarietyRecipes() {
   return (
@@ -21,16 +22,18 @@ function VarietyRecipes() {
 
       {/* Right Section */}
       <section className="right">
-        <GreenSpan text={`Foods & Drinks`} />
-        <h2 data-aos="fade-down-left">Variety Of Dood And Drink Recipes</h2>
+        <GreenSpan text="Seafood" />
+        <h2 data-aos="fade-down-left">Variety Of Seafood</h2>
         <div data-aos="fade-left" className="p-right">
           <p>
-            We have many variations of recipes for food and drink recipes from
-            trusted chefs, with clear cooking methods and delicious flavors.
+            Various healthy and refreshing seafood recipes, with delicious taste
+            and stunning appearance.
           </p>
         </div>
         <div data-aos="fade-up" className="btn-container">
-          <Button text="See Menu" onClick={() => alert("Not Available")} />
+          <Link href="/seafood" passHref>
+            <Button text="See Menu" />
+          </Link>
         </div>
       </section>
     </div>

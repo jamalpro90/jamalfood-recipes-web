@@ -15,7 +15,7 @@ export default function Home({ mealsArea }) {
     Aos.init({ duration: 1400, once: true });
   }, []);
 
-  console.log(mealsArea);
+  // console.log(mealsArea);
   return (
     <Layout title="Home">
       <Navbar />
